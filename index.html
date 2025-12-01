@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Private Content Share</title>
 
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style>
 * { box-sizing: border-box; margin:0; padding:0; font-family:'Segoe UI', Tahoma, Arial, sans-serif; }
 body { background:#0d0d0d; color:#e0e0e0; line-height:1.5; }
@@ -20,12 +23,8 @@ body { background:#0d0d0d; color:#e0e0e0; line-height:1.5; }
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     z-index: 999;
 }
-.header h1 {
-    font-size: 20px; font-weight: 800; color:#fff;
-}
-.age-warning {
-    font-size:14px; color:#ff6b6b; font-weight:700; margin-top:3px;
-}
+.header h1 { font-size: 20px; font-weight: 800; color:#fff; }
+.age-warning { font-size:14px; color:#ff6b6b; font-weight:700; margin-top:3px; }
 
 /* CONTAINER */
 .container {
@@ -60,20 +59,35 @@ body { background:#0d0d0d; color:#e0e0e0; line-height:1.5; }
     font-size:13px;
 }
 
-/* BUTTONS */
+/* BUTTONS WITH ICON & GLOW EFFECT */
 .btn-container { display:flex; flex-direction:column; gap:15px; }
-.btn {
-    padding:15px; font-size:16px; font-weight:900; border-radius:10px; text-align:center;
-    text-decoration:none; cursor:pointer; transition:0.3s all ease-in-out;
+.glow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(45deg, #00ffea, #0066ff);
+    color: white; 
+    font-size: 18px; 
+    font-weight: bold;
+    padding: 10px; 
+    border-radius: 50px; 
+    text-align: center;
+    text-decoration: none;
+    cursor:pointer;
+    animation: glow 3s infinite alternate;
+    width: 100%;
+    transition: transform 0.1s;
 }
-.btn:hover { transform:scale(1.05); filter:brightness(1.1); }
-.btn:active { transform:scale(0.97); }
+.glow-btn i { font-size:20px; }
 
-/* COLORS */
-.btn-gdrive { background:#1a73e8; color:white; }
-.btn-gdrive:hover { background:#1557b0; }
-.btn-mega { background:#d90007; color:white; }
-.btn-mega:hover { background:#b00006; }
+.glow-btn:active { transform: scale(0.97); }
+
+@keyframes glow {
+    0% { box-shadow: 0 0 15px #00ffe0; transform: scale(1); }
+    50% { box-shadow: 0 0 25px #00aaff; transform: scale(1.05); }
+    100% { box-shadow: 0 0 15px #00ffe0; transform: scale(1); }
+}
 
 /* FOOTER */
 .footer {
@@ -89,7 +103,7 @@ body { background:#0d0d0d; color:#e0e0e0; line-height:1.5; }
 @media (min-width:769px){
     .container { max-width:650px; }
     .btn-container { flex-direction:row; gap:18px; }
-    .btn { min-width:220px; font-size:18px; padding:18px; }
+    .glow-btn { min-width:220px; font-size:20px; }
 }
 </style>
 </head>
@@ -118,8 +132,8 @@ body { background:#0d0d0d; color:#e0e0e0; line-height:1.5; }
     <div class="safe">এই ফাইলটি ১০০% সেফ এবং ভাইরাস ফ্রি। স্ক্যান করা হয়েছে।</div>
 
     <div class="btn-container">
-        <a id="down" class="btn btn-gdrive">ডাউনলোড করুন</a>
-        <a id="watch" class="btn btn-mega">এখন দেখুন</a>
+        <a id="down" class="glow-btn"><i class="fa-solid fa-download"></i> ডাউনলোড করুন</a>
+        <a id="watch" class="glow-btn"><i class="fa-solid fa-play"></i> এখন দেখুন</a>
     </div>
 </div>
 
