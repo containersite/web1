@@ -2,29 +2,132 @@
 
 <style>
 * { box-sizing: border-box; }
-body, html { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; background: #0d0d0d; color: #e0e0e0; }
-.header { background: #1a1a1a; padding: 20px 15px; text-align: center; border-bottom: 3px solid #4dabf7; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-.header h1 { margin: 0; font-size: 20px; font-weight: 700; color: #fff; }
-.age-warning { margin-top: 10px; color: #ff6b6b; font-weight: 600; font-size: 13px; }
-.container { max-width: 95%; margin: 20px auto; background: #1e1e1e; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.6); padding: 20px; }
-.author-profile { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
-.author-profile img { width: 45px; height: 45px; border-radius: 50%; border: 2px solid #4dabf7; }
-.author-name { font-weight: 700; font-size: 15px; color: #fff; }
-.publish-time { font-size: 12px; color: #999; }
-.file-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
-.file-meta div { background: #2a2a2a; padding: 6px 10px; border-radius: 8px; font-size: 12px; font-weight: 500; }
-.safe { background: #1b4332; border-left: 5px solid #2ecc71; padding: 12px; border-radius: 8px; color: #b8e6b8; margin: 15px 0; font-size: 13px; }
-.btn-container { display: flex; flex-direction: column; gap: 15px; }
-.btn { padding: 15px; font-size: 16px; font-weight: 700; border-radius: 10px; text-decoration: none; text-align: center; transition: 0.3s; cursor:pointer; }
+body, html { 
+    margin: 0; padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif; 
+    background: #0d0d0d; 
+    color: #e0e0e0;
+}
+
+/* HEADER */
+.header { 
+    background: #1a1a1a; 
+    padding: 25px 15px; 
+    text-align: center; 
+    border-bottom: 3px solid #4dabf7; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+}
+.header h1 { 
+    margin: 0; 
+    font-size: 26px; 
+    font-weight: 700; 
+    color: #fff; 
+}
+.age-warning { 
+    margin-top: 12px; 
+    color: #ff6b6b; 
+    font-weight: 700; 
+    font-size: 15px; 
+}
+
+/* MAIN BOX */
+.container { 
+    max-width: 98%; 
+    margin: 22px auto; 
+    background: #1e1e1e; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6); 
+    padding: 25px; 
+}
+
+/* PROFILE */
+.author-profile { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    margin-bottom: 20px; 
+}
+.author-profile img { 
+    width: 65px; 
+    height: 65px; 
+    border-radius: 50%; 
+    border: 3px solid #4dabf7; 
+}
+.author-name { 
+    font-weight: 700; 
+    font-size: 18px; 
+}
+.publish-time { 
+    font-size: 14px; 
+    color: #bbb; 
+}
+
+/* META */
+.file-meta { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin: 18px 0; 
+}
+.file-meta div { 
+    background: #2a2a2a; 
+    padding: 10px 14px; 
+    border-radius: 10px; 
+    font-size: 14px; 
+    font-weight: 600; 
+}
+
+/* SAFE BOX */
+.safe { 
+    background: #1b4332; 
+    border-left: 6px solid #2ecc71; 
+    padding: 15px; 
+    border-radius: 10px; 
+    color: #b8e6b8; 
+    margin: 20px 0; 
+    font-size: 15px; 
+}
+
+/* BUTTONS */
+.btn-container { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 18px; 
+}
+.btn { 
+    padding: 18px 15px; 
+    font-size: 20px; 
+    font-weight: 800; 
+    border-radius: 12px; 
+    text-decoration: none; 
+    text-align: center; 
+    transition: 0.3s; 
+    cursor:pointer; 
+}
 .btn-gdrive { background: #1a73e8; color: white; }
 .btn-gdrive:hover { background: #1557b0; }
+
 .btn-mega { background: #d90007; color: white; }
 .btn-mega:hover { background: #b00006; }
-.note { text-align: center; color: #bbb; font-size: 13px; margin-top: 15px; }
-.footer { text-align: center; padding: 20px; background: #111; color: #777; font-size: 12px; margin-top: 30px; }
-@media (min-width: 640px) { .header h1 { font-size: 25px; } .btn-container { flex-direction: row; justify-content: center; gap: 15px; } .btn { margin: 0; min-width: 200px; } }
-</style>
 
+/* FOOTER */
+.footer { 
+    text-align: center; 
+    padding: 22px; 
+    background: #111; 
+    color: #777; 
+    font-size: 14px; 
+    margin-top: 35px; 
+}
+
+/* Desktop tweaks */
+@media (min-width: 640px) {
+    .container { max-width: 600px; }
+    .btn-container { flex-direction: row; gap: 15px; }
+    .btn { min-width: 220px; }
+}
+</style>
 
 
 <header class="header">
@@ -33,8 +136,9 @@ body, html { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Arial, sans
 </header>
 
 <div class="container">
+
     <div class="author-profile">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeBdxUS86wJt4xWkzLOeq_Iw8dfYHCkpT1yA&s" alt="Uploader" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeBdxUS86wJt4xWkzLOeq_Iw8dfYHCkpT1yA&s" />
         <div>
             <div class="author-name">Uploader: PORN HUB</div>
             <div class="publish-time">Published: ২৯ নভেম্বর, ২০২৫</div>
@@ -47,9 +151,7 @@ body, html { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Arial, sans
         <div>Duration: ৪৫ মিনিট</div>
     </div>
 
-    <div class="safe">
-        এই ফাইলটি ১০০% সেফ এবং ভাইরাস ফ্রি। স্ক্যান করা হয়েছে।
-    </div>
+    <div class="safe">এই ফাইলটি ১০০% সেফ এবং ভাইরাস ফ্রি। স্ক্যান করা হয়েছে।</div>
 
     <div class="btn-container">
         <a id="down" class="btn btn-gdrive">ডাউনলোড করুন</a>
@@ -80,6 +182,5 @@ function go(link){
 document.getElementById("watch").onclick = e => { e.preventDefault(); go(watchURL); };
 document.getElementById("down").onclick = e => { e.preventDefault(); go(downloadURL); };
 </script>
-
 
 </!doctype>
