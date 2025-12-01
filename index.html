@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Private Content Share</title>
 
-<!-- Font Awesome CDN -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
 * { box-sizing: border-box; margin:0; padding:0; font-family:'Segoe UI', Tahoma, Arial, sans-serif; }
 body { background:#0d0d0d; color:#e0e0e0; line-height:1.5; }
 
-/* FIXED HEADER */
+/* HEADER */
 .header {
-    position: fixed;
-    top:0; left:0; width:100%;
+    position: fixed; top:0; left:0; width:100%;
     background: #1a1a1a;
     padding: 15px 10px;
     text-align: center;
@@ -37,9 +36,7 @@ body { background:#0d0d0d; color:#e0e0e0; line-height:1.5; }
 }
 
 /* PROFILE */
-.author-profile {
-    display: flex; align-items:center; gap:10px; margin-bottom:15px;
-}
+.author-profile { display: flex; align-items:center; gap:10px; margin-bottom:15px; }
 .author-profile img { width:50px; height:50px; border-radius:50%; border:2px solid #4dabf7; }
 .author-name { font-weight:800; font-size:16px; }
 .publish-time { font-size:12px; color:#bbb; }
@@ -59,35 +56,62 @@ body { background:#0d0d0d; color:#e0e0e0; line-height:1.5; }
     font-size:13px;
 }
 
-/* BUTTONS WITH ICON & GLOW EFFECT */
+/* BUTTONS WITH ICON & GLOW */
 .btn-container { display:flex; flex-direction:column; gap:15px; }
 .glow-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    background: linear-gradient(45deg, #00ffea, #0066ff);
+    gap: 10px;
     color: white; 
     font-size: 18px; 
     font-weight: bold;
-    padding: 10px; 
+    padding: 18px; 
     border-radius: 50px; 
     text-align: center;
     text-decoration: none;
     cursor:pointer;
-    animation: glow 3s infinite alternate;
     width: 100%;
-    transition: transform 0.1s;
+    transition: all 0.3s ease;
 }
+
+/* ICON SIZE */
 .glow-btn i { font-size:20px; }
 
-.glow-btn:active { transform: scale(0.97); }
-
-@keyframes glow {
-    0% { box-shadow: 0 0 15px #00ffe0; transform: scale(1); }
-    50% { box-shadow: 0 0 25px #00aaff; transform: scale(1.05); }
-    100% { box-shadow: 0 0 15px #00ffe0; transform: scale(1); }
+/* DOWNLOAD BUTTON */
+.btn-download {
+    background: linear-gradient(135deg, #ff4500, #ff7f50);
+    box-shadow: 0 0 8px rgba(255,69,0,0.8);
+    animation: glowDownload 1.5s infinite alternate;
 }
+.btn-download:hover {
+    background: linear-gradient(135deg, #ff6347, #ff8c00);
+}
+
+/* WATCH BUTTON */
+.btn-watch {
+    background: linear-gradient(135deg, #2ecc71, #00b894);
+    box-shadow: 0 0 8px rgba(46,204,113,0.8);
+    animation: glowWatch 1.5s infinite alternate;
+}
+.btn-watch:hover {
+    background: linear-gradient(135deg, #27ae60, #00d084);
+}
+
+/* Glow Animations */
+@keyframes glowDownload {
+    0% { box-shadow: 0 0 8px rgba(255,69,0,0.6); transform: scale(1); }
+    50% { box-shadow: 0 0 16px rgba(255,69,0,0.9); transform: scale(1.03); }
+    100% { box-shadow: 0 0 8px rgba(255,69,0,0.6); transform: scale(1); }
+}
+@keyframes glowWatch {
+    0% { box-shadow: 0 0 8px rgba(46,204,113,0.6); transform: scale(1); }
+    50% { box-shadow: 0 0 16px rgba(46,204,113,0.9); transform: scale(1.03); }
+    100% { box-shadow: 0 0 8px rgba(46,204,113,0.6); transform: scale(1); }
+}
+
+/* ACTIVE EFFECT */
+.glow-btn:active { transform: scale(0.97); }
 
 /* FOOTER */
 .footer {
@@ -118,7 +142,7 @@ body { background:#0d0d0d; color:#e0e0e0; line-height:1.5; }
     <div class="author-profile">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeBdxUS86wJt4xWkzLOeq_Iw8dfYHCkpT1yA&s" />
         <div>
-            <div class="author-name">Uploader: PORN HUB</div>
+            <div class="author-name">Alison Tyler</div>
             <div class="publish-time">Published: ২৯ নভেম্বর, ২০২৫</div>
         </div>
     </div>
@@ -132,8 +156,9 @@ body { background:#0d0d0d; color:#e0e0e0; line-height:1.5; }
     <div class="safe">এই ফাইলটি ১০০% সেফ এবং ভাইরাস ফ্রি। স্ক্যান করা হয়েছে।</div>
 
     <div class="btn-container">
-        <a id="down" class="glow-btn"><i class="fa-solid fa-download"></i> ডাউনলোড করুন</a>
-        <a id="watch" class="glow-btn"><i class="fa-solid fa-play"></i> এখন দেখুন</a>
+    <a id="watch" class="glow-btn btn-watch"><i class="fa-solid fa-play"></i> এখন দেখুন</a>
+        <a id="down" class="glow-btn btn-download"><i class="fa-solid fa-download"></i> ডাউনলোড করুন</a>
+        
     </div>
 </div>
 
